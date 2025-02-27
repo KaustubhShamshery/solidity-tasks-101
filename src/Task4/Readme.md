@@ -1,0 +1,1 @@
+![Alt text](../../static/gasImplications.png "Gas Implications")
