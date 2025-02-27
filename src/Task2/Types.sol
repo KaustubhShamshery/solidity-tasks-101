@@ -1,8 +1,7 @@
 pragma solidity ^0.8.0;
 
 contract BasicDataTypes {
-
-    uint public number = 42;
+    uint256 public number = 42;
     bool private isActive = true;
     string internal message = "Hello, Solidity!";
     address public owner;
@@ -11,7 +10,7 @@ contract BasicDataTypes {
         owner = msg.sender;
     }
 
-    function getNumber() public view returns (uint) {
+    function getNumber() public view returns (uint256) {
         return number;
     }
 
@@ -23,7 +22,7 @@ contract BasicDataTypes {
         return isActive;
     }
 
-    function addNumbers(uint a, uint b) public pure returns (uint) {
+    function addNumbers(uint256 a, uint256 b) public pure returns (uint256) {
         return a + b;
     }
 }

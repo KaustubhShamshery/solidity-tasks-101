@@ -3,8 +3,6 @@ pragma solidity ^0.8.20;
 import "./MathUtils.sol";
 
 contract Calc {
-
-
     address public owner;
 
     constructor() {

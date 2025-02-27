@@ -30,7 +30,7 @@ contract ErrorHandling {
         balance = 100;
     }
 
-    function restrictedAction() view external {
+    function restrictedAction() external view {
         if (msg.sender != owner) {
             revert Unauthorized();
         }

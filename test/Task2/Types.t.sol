@@ -11,12 +11,12 @@ contract BasicDataTypesTest is Test {
     }
 
     function testGetNumber() public view {
-        uint expected = 42;
+        uint256 expected = 42;
         assertEq(basicDataTypes.getNumber(), expected, "getNumber should return 42");
     }
 
     function testAddNumbers() public view {
-        uint result = basicDataTypes.addNumbers(10, 20);
+        uint256 result = basicDataTypes.addNumbers(10, 20);
         assertEq(result, 30, "addNumbers should return correct sum");
     }
 
