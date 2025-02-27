@@ -1,5 +1,11 @@
 {
   "dependencies": {
     "@openzeppelin/contracts": "^5.2.0"
+  },
+  "devDependencies": {
+    "solhint": "^5.0.5"
+  },
+  "scripts": {
+    "lint": "solhint 'src/**/*.sol' 'test/**/*.sol'"
   }
 }

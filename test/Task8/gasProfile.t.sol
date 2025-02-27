@@ -28,15 +28,18 @@ contract GasComparisonTest is Test {
         emit log_named_uint("Gas used (Optimized increment)", gasUsed);
     }
 
-    function testGasOwner() public {
+    function testGasOwnerOptimized() public {
         uint256 gasUsed = gasleft();
-        inefficient.getOwner();
-        gasUsed -= gasleft();
-        emit log_named_uint("Gas used (Inefficient getOwner)", gasUsed);
-
         gasUsed = gasleft();
         optimized.getOwner();
         gasUsed -= gasleft();
         emit log_named_uint("Gas used (Optimized getOwner)", gasUsed);
+    }
+
+    function testGasOwnerInefficient() public {
+        uint256 gasUsed = gasleft();
+        inefficient.getOwner();
+        gasUsed -= gasleft();
+        emit log_named_uint("Gas used (Inefficient getOwner)", gasUsed);
     }
 }

@@ -10,10 +10,14 @@ contract GasOptimized {
     }
 
     function increment() external {
-        unchecked {
-            counter += 1;  
-        }
-        emit Incremented(counter);
+        
+            for (uint256 i = 0; i < 100; i++) {
+                unchecked {
+                    counter += 1;
+                    uint256 a = 1/counter;
+                }
+            }
+        
     }
 
     function getOwner() external view returns (address) {

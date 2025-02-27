@@ -10,8 +10,12 @@ contract GasInefficient {
     constructor() {}
 
     function increment() external {
-        counter += 1;  
-        emit Incremented(counter);
+       
+            for (uint256 i = 0; i < 100; i++) {
+                counter += 1;
+                uint256 a = 1/counter;
+            }
+        
     }
 
     function getOwner() external view returns (address) {
